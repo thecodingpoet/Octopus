@@ -1,44 +1,7 @@
 <div class="container main">
-  <h1 class="text-center">Social Media Lists</h1>
-  <div class="row search-form">
-    <div class="form-group col-2">
-      <label for="exampleFormControlSelect1">List Type</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
-    </div>
+  <h1 class="text-center"><a href="/" class="main-text">Social Media Lists</a></h1>
 
-    <div class="form-group col-2">
-      <label for="exampleFormControlSelect1">Social Network</label>
-      <select class="form-control" id="exampleFormControlSelect1">
-        <option>Facebook</option>
-        <option>Twitter</option>
-      </select>
-    </div>
-
-    <div class="form-group col-3 date-range">
-      <label for="example-date-input" class="col-2 col-form-label">From</label>
-      <div class="col-12">
-        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-      </div>
-    </div>
-
-     <div class="form-group col-3 date-range">
-      <label for="example-date-input" class="col-2 col-form-label">To</label>
-      <div class="col-12">
-        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-      </div>
-    </div>
-
-    <div class="form-group col-2">
-      <button type="button" class="btn btn-primary search-btn">Search</button>
-     </div>
- 
-  </div>
+  <%= render 'search', lists: @lists %>
 
   <table class="table">
     <thead>
@@ -47,7 +10,7 @@
         <th>Content of Post ( or Tweet )</th>
         <th>Social Network</th>
         <th>Link</th>
-        <th>Created At</th>
+        <th>Posted At</th>
       </tr>
     </thead>
     <tbody>
