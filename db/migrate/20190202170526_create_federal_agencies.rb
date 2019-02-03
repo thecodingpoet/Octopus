@@ -1,6 +1,6 @@
-class CreateCustomLists < ActiveRecord::Migration[5.1]
+class CreateFederalAgencies < ActiveRecord::Migration[5.1]
   def change
-    create_table :custom_lists do |t|
+    create_table :federal_agencies do |t|
       t.string :first_name, :null => false
       t.string :last_name, :null => false
       t.string :facebook_id

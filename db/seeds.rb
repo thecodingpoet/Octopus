@@ -1,4 +1,8 @@
-[Governor, FederalAgency, FederalLegislator].each do |list|
+
+[CustomList::Governor, CustomList::FederalAgency, NonCustomList::FederalLegislator].each do |list|
+  category, name = list.to_s.split('::')
+  List.create(name: name, category: category)
+
   10.times do
     l = list.create(
       first_name: Faker::Name.first_name,  
