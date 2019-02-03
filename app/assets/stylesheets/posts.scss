@@ -1,0 +1,19 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main {
+  margin-top: 40px;
+  .date-range {
+    margin-top: -5px;
+  }
+  
+  .search-btn {
+    margin-top: 32px
+  }
+  
+  .search-form {
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+}
