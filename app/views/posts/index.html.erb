@@ -1,6 +1,5 @@
 <div class="container main">
   <h1 class="text-center">Social Media Lists</h1>
-
   <div class="row search-form">
     <div class="form-group col-2">
       <label for="exampleFormControlSelect1">List Type</label>
@@ -47,6 +46,7 @@
         <th>S. no</th>
         <th>Content of Post ( or Tweet )</th>
         <th>Social Network</th>
+        <th>Link</th>
         <th>Created At</th>
       </tr>
     </thead>
@@ -54,4 +54,7 @@
       <%= render @posts %>
     </tbody>
   </table>
+  <div class="float-right">
+    <%= paginate @posts %>
+  </div>
 </div>
