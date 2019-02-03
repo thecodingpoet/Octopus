@@ -10,20 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190202184456) do
+ActiveRecord::Schema.define(version: 20190203050402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "custom_lists", force: :cascade do |t|
+  create_table "federal_agencies", force: :cascade do |t|
     t.string "first_name", null: false
     t.string "last_name", null: false
     t.string "facebook_id"
     t.string "twitter_username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "type"
-    t.index ["type"], name: "index_custom_lists_on_type"
   end
 
   create_table "federal_legislators", force: :cascade do |t|
@@ -31,6 +29,22 @@ ActiveRecord::Schema.define(version: 20190202184456) do
     t.string "last_name", null: false
     t.string "facebook_id"
     t.string "twitter_username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "governors", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "facebook_id"
+    t.string "twitter_username"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "category", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
