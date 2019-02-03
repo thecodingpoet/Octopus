@@ -8,12 +8,14 @@
     margin-top: -5px;
   }
   
-  .search-btn {
-    margin-top: 32px
-  }
-  
   .search-form {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  .main-text:hover {
+    text-decoration: none !important;
+    color: #007bff;
+  }
+
 }
