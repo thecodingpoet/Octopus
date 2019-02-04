@@ -29,14 +29,14 @@ feature 'search posts', js: true do
 
   scenario 'shows posts from facebook' do  
     visit('/')
-    find('#type').find(:xpath, 'option[2]').select_option
+    find('#social_media').find(:xpath, 'option[2]').select_option
     click_button 'Search'
     expect(page).to have_content(content)
   end
 
   scenario 'does not show posts from facebook' do 
     visit('/')
-    find('#type').find(:xpath, 'option[3]').select_option
+    find('#social_media').find(:xpath, 'option[3]').select_option
     click_button 'Search'
     expect(page).not_to have_content(content)
   end
