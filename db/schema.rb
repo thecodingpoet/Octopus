@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20190203050402) do
     t.string "link", null: false
     t.datetime "created_at", null: false
     t.index ["postable_type", "postable_id"], name: "index_posts_on_postable_type_and_postable_id"
+    t.index ["social_media", "postable_type", "created_at"], name: "index_posts_on_social_media_and_postable_type_and_created_at"
   end
 
 end
