@@ -1,24 +1,36 @@
-# README
+# Social Media Lists
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application lets you view all tweets and Facebook posts from lists of people. These lists will be a combination of custom lists that we create ourselves and lists built from existing tables in our database.
 
-Things you may want to cover:
+## Installation
 
-* Ruby version
+Follow these easy steps to install and start the app:
 
-* System dependencies
+### Pre-requisites
+- Ruby >= 2.3.6
+- Ruby on Rails >= 5.1.6.1
+- PostgreSQL
+- Chrome Browser
 
-* Configuration
+### Set up Rails app
 
-* Database creation
+First, install the gems required by the application:
 
-* Database initialization
+    bundle
 
-* How to run the test suite
+Next, execute the database migrations/schema setup:
 
-* Services (job queues, cache servers, search engines, etc.)
+	bundle exec rake db:setup
 
-* Deployment instructions
 
-* ...
+### Start the app
+
+Start the Rails app to see the application:
+
+    bundle exec rails server
+
+You can find your app now by pointing your browser to [http://localhost:3000](http://localhost:3000)
+
+### Running specs
+    bundle exec rspec
+
