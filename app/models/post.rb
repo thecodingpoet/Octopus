@@ -7,5 +7,5 @@ class Post < ApplicationRecord
 
   validates :content, presence: true
   validates :link, presence: true
-  validates :social_name, presence: true
+  validates :social_media, presence: true
 end
