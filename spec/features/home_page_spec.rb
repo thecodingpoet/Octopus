@@ -13,28 +13,28 @@ feature 'search posts', js: true do
   let!(:federal_legislator) { create(:list, name: 'Federal Legislator', category: 'NonCustomList') }
   let!(:governor_post) { create(:governor_post, social_media: 'Facebook', content: content) }
 
-  scenario 'shows posts created by Governor' do
+  scenario 'shows posts from Governor List' do
     visit('/')
     find('#type').find(:xpath, 'option[2]').select_option
     click_button 'Search'
     expect(page).to have_content(content)
   end
   
-  scenario 'does not show post created by Governor' do
+  scenario 'does not show post from Governor List' do
     visit('/')
     find('#type').find(:xpath, 'option[3]').select_option
     click_button 'Search'
     expect(page).not_to have_content(content)
   end
 
-  scenario 'shows posts created from facebook' do  
+  scenario 'shows posts from facebook' do  
     visit('/')
     find('#type').find(:xpath, 'option[2]').select_option
     click_button 'Search'
     expect(page).to have_content(content)
   end
 
-  scenario 'does not show posts created from facebook' do 
+  scenario 'does not show posts from facebook' do 
     visit('/')
     find('#type').find(:xpath, 'option[3]').select_option
     click_button 'Search'
